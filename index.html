@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Planner Pro</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+<body>
+
+<div class="layout">
+
+  <!-- SIDEBAR -->
+  <div class="sidebar">
+
+  <!-- ✅ TOP SECTION -->
+  <div class="sidebar-top">
+    <h2>Planner</h2>
+
+    <button onclick="setView('daily')">
+      <i class="fas fa-calendar-day"></i> Daily
+    </button>
+
+    <button onclick="setView('yearly')">
+      <i class="fas fa-chart-line"></i> Yearly
+    </button>
+
+    <button>
+      <i class="fas fa-calendar"></i> Calendar
+    </button>
+
+    <button>
+      <i class="fas fa-list-check"></i> All Tasks
+    </button>
+
+    <button id="themeToggle">
+      <i class="fas fa-moon"></i> Theme
+    </button>
+  </div>
+
+  <!-- ✅ BOTTOM SECTION -->
+  <div class="sidebar-bottom">
+
+    <button id="loginBtn">
+      <i class="fas fa-right-to-bracket"></i> Login
+    </button>
+
+    <button id="logoutBtn" style="display:none;">
+      <i class="fas fa-right-from-bracket"></i> Sign Out
+    </button>
+
+    <p id="userInfo">
+      <i class="fas fa-user-circle"></i> Not logged in
+    </p>
+
+  </div>
+
+</div>
+  <!-- MAIN -->
+  <div class="main">
+
+    <!-- ✅ TOP ROW -->
+    <div class="top-row">
+
+      <!-- ✅ CALENDAR -->
+      <div class="calendar-container">
+        <div id="calendar"></div>
+      </div>
+
+      <!-- ✅ TASK PANEL -->
+      <div class="task-panel" id="taskPanel">
+        <h3 id="panelDate">Add Task</h3>
+
+        <div class="task-input">
+
+          <input id="taskTitle" placeholder="Task title">
+          <input type="time" id="taskTime">
+
+          <!-- ✅ CATEGORY (SAFE ADD) -->
+          <select id="taskCategory">
+            <option value="Work">Work</option>
+            <option value="Fitness">Fitness</option>
+            <option value="Meetings">Meetings</option>
+            <option value="Travel">Travel</option>
+            <option value="Routine">Routine</option>
+          </select>
+
+          <!-- ✅ PRIORITY -->
+          <select id="taskPriority">
+            <option>Low</option>
+            <option>Medium</option>
+            <option>High</option>
+          </select>
+
+          <!-- ✅ REPEAT -->
+          <select id="taskRepeat">
+            <option value="none">No Repeat</option>
+            <option value="daily">Daily</option>
+            <option value="weekly">Weekly</option>
+            <option value="monthly">Monthly</option>
+          </select>
+
+          <input id="taskLocation" placeholder="Location">
+          <input id="taskDescription" placeholder="Description">
+
+          <!-- ✅ ACTION BUTTONS -->
+          <button id="addBtn">Add</button>
+         <button id="cancelEditBtn" style="display:none;" type="button">Cancel Edit</button>
+          <button id="closePanel" type="button">Close</button>
+
+        </div>
+      </div>
+
+    </div>
+
+    <!-- ✅ TASKS BELOW -->
+    <div class="bottom-section">
+      <div id="overview"></div>
+      <ul id="taskList"></ul>
+    </div>
+
+  </div>
+
+</div>
+
+<script type="module" src="app.js"></script>
+
+</body>
+</html>
