@@ -1,0 +1,22 @@
+{
+  "tasks": {
+    "task1": {
+      "title": "Complete Report",
+      "date": "2026-07-02",
+      "priority": "High",
+      "status": "Open"
+    },
+    "task2": {
+      "title": "Team Meeting",
+      "date": "2026-07-02",
+      "priority": "Medium",
+      "status": "Open"
+    },
+    "task3": {
+      "title": "Update Documentation",
+      "date": "2026-07-03",
+      "priority": "Low",
+      "status": "Completed"
+    }
+  }
+}
